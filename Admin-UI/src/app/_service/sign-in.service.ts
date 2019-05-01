@@ -26,10 +26,10 @@ export class SigninService {
   checkCredentials(userName, password): Observable<any> {
     console.log('in sign in service');
     let myparams = new HttpParams();
-    this.user.mobileNo = userName;
-    this.user.password = password;
+    this.user.userName = userName;
+    this.user.passWord = password;
     return this.http.post(
-      endpoint+'signin',
+      endpoint+'signin/',
       this.user,
       {responseType: 'text'});
   }

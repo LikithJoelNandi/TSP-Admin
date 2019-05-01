@@ -9,33 +9,26 @@
               <th>Offer</th>
               <th>Validity</th>
               <th>Price</th>
+              <th>Modify</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>1</td>
-              <td>Unlimited Calls + Data</td>
-              <td>28 days</td>
-              <td>{{currencySymbol}}199</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>Unlimited Calls + Data</td>
-              <td>90 days</td>
-              <td>{{currencySymbol}}509</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>Free Calls + Data</td>
-              <td>1 days</td>
-              <td>{{currencySymbol}}9</td>
+            <tr *ngFor="let offer of offerData">
+              <td>{{offer.offerId}}</td>
+              <td>{{offer.offerName}}</td>
+              <td>{{offer.validityInDays}}</td>
+              <td>{{currencySymbol}}{{offer.price}}</td>
+              <td>
+                <button type="button" class="btn btn-primary" (click)="modifyOffer(offer)" >Modify Offer</button>
+                <button type="button" class="btn btn-primary" (click)="deleteOffer(offer)" >Delete Offer</button>
+              </td>
             </tr>
           </tbody>
         </table>
         </div>
     </div>
-    <div class="col-sm-3">
-      <button type="button" class="btn btn-primary">Create Offer</button>
+    <div class="col-sm-3" style="float:inherit">
+      <button type="button" class="btn btn-primary"  [routerLink]="['/sideBar/create-single-offer']" >Create Offer</button>
     </div>
   </div>
 </div>

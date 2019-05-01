@@ -6,21 +6,27 @@
           <div style="margin-top: 85px; color:rebeccapurple;">
             <span>Please sign in</span>
             <div class="my-form">
-              <form #form="ngForm" (ngSubmit)="onSubmit()">
-                <div class="form-group">
-                  <label for="exampleInputEmail1">User name</label>
-                  <input type="text"  class="form-control" name="userName" id="userName" aria-describedby="userNameHelp"
-                    placeholder="Enter user name" [ngModel]="user.userName" required>
-                  <small id="userNameHelp" class="form-text text-muted">We'll never share your user name with anyone
-                    else.</small>
-                </div>
-                <div class="form-group">
-                  <label for="exampleInputPassword1">Password</label>
-                  <input type="password"  class="form-control" name="Password" id="exampleInputPassword1"
-                    placeholder="Password" [ngModel]="user.password" required>
-                </div>
-                <button type="submit" class="btn btn-primary" routerLink = "/sideBar" routerLinkActive="buttonColor">Sign In</button>
-              </form>
+                <form [formGroup]="registerForm" (ngSubmit)="onSubmit(registerForm.value)">
+
+                    <div class="form-group">
+                        <label>User Name</label>
+                        <input type="text" formControlName="userName" class="form-control" 
+                        [ngClass]="{ 'is-invalid': submitted && f.userName.errors }"  placeholder="Enter UserName"/>
+                        <div *ngIf="submitted && f.userName.errors" class="invalid-feedback">
+                            <div *ngIf="f.userName.errors.required">User Name is required</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                      <label>Password</label>
+                      <input type="password" formControlName="password" class="form-control" 
+                      [ngClass]="{ 'is-invalid': submitted && f.password.errors }"  placeholder="Enter Password" />
+                      <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                          <div *ngIf="f.password.errors.required">Password is required</div>
+                          <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+                      </div>
+                  </div>  
+                  <button class="btn btn-primary" routerLink = "/sideBar">SignIn</button>
+                  </form>
             </div>
           </div>
         </div>
@@ -29,4 +35,4 @@
     <div class="col-sm-4"></div>
   </div>
 
- 
+  

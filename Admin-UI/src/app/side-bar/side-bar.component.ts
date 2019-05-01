@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { DataStorageService } from '../shared/data-storage.service';
 
 @Component({
   selector: 'app-side-bar',
@@ -13,6 +14,7 @@ export class SideBarComponent implements OnInit {
   showReportPage:boolean;
 
   constructor(
+  private dataStorageService : DataStorageService,
   private router : Router
   ) { }
 

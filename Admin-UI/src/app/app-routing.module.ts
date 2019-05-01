@@ -6,6 +6,8 @@ import { EnrollSubscriberComponent } from './enroll-subscriber/enroll-subscriber
 import { DeleteOfferComponent } from './delete-offer/delete-offer.component';
 import { CreateOfferComponent } from './create-offer/create-offer.component';
 import { GenerateReportComponent } from './generate-report/generate-report.component';
+import { CreateSingleOfferComponent } from './create-single-offer/create-single-offer.component';
+import { ModifyOfferComponent } from './modify-offer/modify-offer.component';
 
 const routes: Routes = [
   { path: 'signIn', component: SignInComponent},
@@ -16,7 +18,9 @@ const routes: Routes = [
       { path: "enroll", component: EnrollSubscriberComponent },
       { path: "delete-offer", component: DeleteOfferComponent},
       { path: "create-offer", component: CreateOfferComponent},
-      { path: "report", component: GenerateReportComponent}
+      { path: "report", component: GenerateReportComponent},
+      { path: "create-single-offer", component: CreateSingleOfferComponent},
+      { path: "modifyOffer", component: ModifyOfferComponent},
     ]
   },
 
