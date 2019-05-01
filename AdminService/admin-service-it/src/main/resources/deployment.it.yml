@@ -1,0 +1,30 @@
+logging:
+    level:
+        request.trace: INFO
+    path: target/logs
+server:
+    servlet:
+        contextPath: /admin-service
+    tomcat:
+        basedir: target/tomcat
+spring:
+    profiles:
+        active: local
+
+request:
+  logging:
+    secure:
+      enabled: false
+      
+swagger:
+  api:
+    title: admin-service
+    contact.info: Team
+    licence.url: #
+    description:
+    groupName: com.dell.tsp.admin
+    version: 1.0
+    path:
+      regex: /v.*/.*
+  terms.of.service.url: #
+  enabled: true

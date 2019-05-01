@@ -1,0 +1,115 @@
+<div class="page-wrapper chiller-theme toggled">
+  <div class="row" style="padding-top: 100px;">
+    <div class="col-lg-3 col-md-3 col-xs-12 col-sm-12">
+      <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
+        <i class="fas fa-bars"></i>
+      </a>
+      <nav id="sidebar" class="sidebar-wrapper">
+        <div class="sidebar-content">
+          <div class="sidebar-brand">
+            <a>Admin Services</a>
+            <div id="close-sidebar">
+              <i class="fas fa-times"></i>
+            </div>
+          </div>
+          <!-- <div class="sidebar-header">
+            <div class="user-pic">
+              <img class="img-responsive img-rounded"
+                src="https://raw.githubusercontent.com/azouaoui-med/pro-sidebar-template/gh-pages/src/img/user.jpg"
+                alt="User picture">
+            </div>
+            <div class="user-info">
+              <span class="user-name">
+                <strong>Admin</strong>
+              </span>
+              <span class="user-role">Administrator</span>
+              <span class="user-status">
+                <i class="fa fa-circle"></i>
+                <span>Online</span>
+              </span>
+            </div>
+          </div> -->
+          <!-- sidebar-header  -->
+          <!-- <div class="sidebar-search">
+            <div>
+              <div class="input-group">
+                <input type="text" class="form-control search-menu" placeholder="Search...">
+                <div class="input-group-append">
+                  <span class="input-group-text">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div> -->
+          <!-- sidebar-search  -->
+          <div class="sidebar-menu" style="display:block;">
+            <ul>
+              <li>
+                <a class="w3-border-bottom w3-hover-black"
+                [routerLink]="['/sideBar/enroll']">Enroll Subscriber
+                </a>
+              </li>
+              <li>
+                <a class="w3-border-bottom w3-hover-black"
+                [routerLink]="['/sideBar/create-offer']">Offers
+                </a>
+              </li>
+              <li>
+                <a class="w3-border-bottom w3-hover-black" 
+                [routerLink]="['/sideBar/report']">Generate Report
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- <div class="sidebar-menu" style="display:block;">
+            <ul>
+              <li class="sidebar-dropdown">
+                <div class="sidebar-submenu" style="display:block;">
+                  <ul>
+                    <li>
+                      <a class = "w3-border-bottom w3-hover-black">
+                        <i class="fa fa-globe" (click)="enrollClicked()"><span>Enroll Subscriber</span></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="btn w3-border-bottom w3-hover-black">
+                        <i class="fa fa-globe" (click)="createOfferClicked()"><span>Create Offer</span></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a class = "w3-border-bottom w3-hover-black">
+                        <i class="fa fa-globe" (click)="deleteOfferClicked()"><span>Delete Offer</span></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a class = "w3-border-bottom w3-hover-black">
+                        <i class="fa fa-globe" (click)="generateReportClicked()"><span>Generate Report</span></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+				
+              </li>
+
+
+           
+            </ul>
+          </div> -->
+          <!-- sidebar-menu  -->
+        </div>
+
+
+      </nav>
+      <!-- sidebar-wrapper  -->
+    </div>
+    <div  class="col-lg-9 col-md-9 col-sm-12">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  <!-- page-wrapper -->
+  
+</div>
+
+
+

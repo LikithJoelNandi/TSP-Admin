@@ -1,0 +1,19 @@
+.sign-in-div{
+    background-color: aliceblue;
+    text-align: center;
+    font-weight: 600;
+    font-size: xx-large;
+    font-family: initial;
+    height: -webkit-fill-available;
+    margin: 30px;
+}
+.my-form{
+    font-size: large;
+    margin-top: 20px;
+}
+.row{
+    background-color: aliceblue;
+}
+.btttonColor{
+    color : brown;
+}

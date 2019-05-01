@@ -1,0 +1,44 @@
+spring.thymeleaf.cache: false
+
+build:
+    info:
+        file: classpath:build-info.yml
+server:
+  servlet:
+    contextPath: /api
+  port: 8888
+
+swagger:
+  api:
+    title: sample-api
+    contact.info: Team
+    licence.url: #
+    description:
+    groupName: sample-api
+    version: 1.0
+    path:
+      regex: /v.*/.*
+  terms.of.service.url: #
+  enabled: true
+
+request:
+  logging:
+    enabled: true
+    verbose: false
+    
+
+spring:
+    main:
+        allow-bean-definition-overriding: true
+
+    datasource:
+      driverClassName: com.mysql.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/tsp_admin
+      username: root
+      password: Mohini@1
+    jpa:
+      hibernate.ddl-auto: update
+      generate-ddl: true
+      show-sql: true
+useSSL: false
+security.enable-csrf: false
